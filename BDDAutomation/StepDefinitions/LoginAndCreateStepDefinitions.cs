@@ -79,7 +79,7 @@ namespace BDDAutomation.StepDefinitions
             statusValue.Click();
 
             var employeeInput = _driver.FindElement(By.XPath("/html/body/div/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div[2]/div/div[2]/div/div/input"));
-            employeeInput.SendKeys("and");
+            employeeInput.SendKeys("do");
             Thread.Sleep(3000);
             var employeeValue = _wait.Until(_driver =>
                 _driver.FindElements(By.XPath("//div[@role=\"listbox\"]"))).FirstOrDefault();
