@@ -17,12 +17,13 @@ namespace BDDAutomation.StepDefinitions
         public void Before()
         {
             _driver = new EdgeDriver();
+            _driver.Manage().Window.Maximize();
             _wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(10));
         }
         [AfterScenario]
         public void After()
         {
-            Thread.Sleep(100000);
+            Thread.Sleep(50000);
             _driver.Quit();
         }
 
@@ -79,6 +80,7 @@ namespace BDDAutomation.StepDefinitions
 
             var employeeInput = _driver.FindElement(By.XPath("/html/body/div/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div[2]/div/div[2]/div/div/input"));
             employeeInput.SendKeys("and");
+            Thread.Sleep(3000);
             var employeeValue = _wait.Until(_driver =>
                 _driver.FindElements(By.XPath("//div[@role=\"listbox\"]"))).FirstOrDefault();
             employeeValue.Click();
@@ -92,21 +94,28 @@ namespace BDDAutomation.StepDefinitions
             var passwordConfirmField = _driver.FindElement(By.XPath("/html/body/div/div[1]/div[2]/div[2]/div/div/form/div[2]/div/div[2]/div/div[2]/input"));
             passwordConfirmField.SendKeys("password1");
 
-            var saveButton = _driver.FindElement(By.XPath("/html/body/div/div[1]/div[2]/div[2]/div/div/form/div[3]/button[2]"));
-            saveButton.Click();
-            
         }
 
         [Then(@"create and save the user")]
         public void ThenCreateAndSaveTheUser()
         {
-            throw new PendingStepException();
+            var saveButton = _driver.FindElement(By.XPath("/html/body/div/div[1]/div[2]/div[2]/div/div/form/div[3]/button[2]"));
+            saveButton.Click();
         }
 
         [Then(@"check weather if works success")]
         public void ThenCheckWeatherIfWorksSuccess()
         {
-            throw new PendingStepException();
+            var usernameField = _wait.Until(_driver => 
+                _driver.FindElement(By.XPath("/html/body/div/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[1]/div/div[2]/input")));
+            usernameField.SendKeys(_userName);
+
+            var searchButton = _driver.FindElement(By.XPath("/html/body/div/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[2]/button[2]"));
+            searchButton.Click();
+
+            var resultSpan = _wait.Until(_driver =>
+                _driver.FindElement(By.XPath("/html/body/div/div[1]/div[2]/div[2]/div/div[2]/div[2]/div/span")));
+            resultSpan.Text.Should().NotBe("No Records Found");
         }
     }
 }
