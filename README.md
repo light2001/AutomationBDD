@@ -13,7 +13,7 @@ use bdd and selenium to automation test
 ### run it in Test Explorer
 ![image](https://github.com/light2001/AutomationBDD/assets/3821091/9920da82-0f28-4d7d-9b52-117cfb951ad3)
 
-### you can see the edge open and the automation is works
+### you can see the edge web browser opened, and then the automation test works
 ![image](https://github.com/light2001/AutomationBDD/assets/3821091/30f3d8ff-80e4-4d4f-8671-ee421c1354bb)
 
 
