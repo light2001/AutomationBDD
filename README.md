@@ -1,5 +1,5 @@
 # AutomationBDD
-use bdd and selenium to resolve automation test
+use bdd and selenium to automation test
 
 # how to run
 ### Install Visual Studio Plugin——Specflow
