@@ -3,7 +3,7 @@ use bdd and selenium to automation test
 
 # how to run
 ### Install Visual Studio Plugin——Specflow
-![image](https://github.com/light2001/AutomationBDD/assets/3821091/65e3acb2-2f12-4f63-8c37-515b0106fe57)
+![image](https://github.com/light2001/AutomationBDD/assets/3821091/65e3acb2-2f12-4f63-8c37-515b0106fe57)1
 
 ### Install Nuget Package
 ![image](https://github.com/light2001/AutomationBDD/assets/3821091/1f8517b4-2a31-4a99-ba57-b5c1bd6e41b4)
@@ -15,6 +15,7 @@ use bdd and selenium to automation test
 
 ### you can see the edge web browser opened, and then the automation test works
 ![image](https://github.com/light2001/AutomationBDD/assets/3821091/30f3d8ff-80e4-4d4f-8671-ee421c1354bb)
+![image](https://github.com/light2001/AutomationBDD/assets/3821091/0dfc5d16-427a-4a2e-9338-2bcfe6a906e8)
 
 
 
