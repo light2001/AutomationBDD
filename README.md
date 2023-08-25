@@ -15,7 +15,12 @@ use bdd and selenium to automation test
 
 ### you can see the edge web browser opened, and then the automation test works
 ![image](https://github.com/light2001/AutomationBDD/assets/3821091/30f3d8ff-80e4-4d4f-8671-ee421c1354bb)
-![image](https://github.com/light2001/AutomationBDD/assets/3821091/0dfc5d16-427a-4a2e-9338-2bcfe6a906e8)
+
+
+| 左对齐 | 右对齐 | 居中对齐 |
+| :-----| ----: | :----: |
+| 单元格 | 单元格 | 单元格 |
+| 单元格 | 单元格 | 单元格 |
 
 
 
